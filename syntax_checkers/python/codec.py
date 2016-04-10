@@ -26,6 +26,6 @@ try:
 
     compile(text, argv[1], 'exec', 0, 1)
 except SyntaxError as err:
-    print('%s:%s:%s: %s' % (err.filename, err.lineno, err.offset, err.msg))
+    print('{0!s}:{1!s}:{2!s}: {3!s}'.format(err.filename, err.lineno, err.offset, err.msg))
 except Exception as err:
-    print('%s:%s:%s: %s' % (os.path.abspath(argv[1]), 1, 0, err))
+    print('{0!s}:{1!s}:{2!s}: {3!s}'.format(os.path.abspath(argv[1]), 1, 0, err))
